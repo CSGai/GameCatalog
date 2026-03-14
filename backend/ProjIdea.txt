@@ -1,0 +1,58 @@
+*Required technologies:
+    /Backend:
+        -Express.js as backend framework
+        -MongoDBAtlas as database
+    /Frontend:
+        -Any frontend framework
+
+*Assignment:
+    - A table of users (can be added and removed, and so can the games) that when you hover over a user, you can see their profile, and their accumulated score.
+    - Each user profile will contain their game catalog, how much each game is worth (arbitrary score given to each game), and their overall score based on said games.
+    - The table will be sorted by score from highest to lowest.
+
+*General outline:
+    /Backend:
+        /Database:
+            - MongoDBAtlas database
+            /Outline:
+                -2 tables, one containing the user's username, their unique game catalog, and the other a list of the games and their respective scores.
+            /Execution:
+                table 1 (userInfo) collums:
+                    -username
+                    -email_addr
+                    -user_id
+                table 2 (gameInfo) collums:
+                    -game_name
+                    -game_id
+                    -game_score
+                table 3 (userGameInfo) collums:
+                    -user_id
+                    -game_id
+        /Web-Server:
+            /Express.js:
+                /folder-structure:
+                    /src:
+                        /config
+                        /controllers
+                        /routes
+                        /services
+                        /utils
+                        /public:
+                            /styles:
+                                - frontPage.css
+                            /scripts:
+                                - frontPage.js
+                    - server.js
+                
+    /Frontend:
+        - {TBD} framework
+        /Outline:
+            /Buttons:
+                -Create new user
+                -Add new game and respective score to game catalog
+            /Table:
+                /Cells:
+                    -Show username and score
+                /Cells:Hover:Profile:
+                    -Show profile
+                    -Button add/remove games from user

@@ -1,0 +1,104 @@
+.profileContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #8b8b8bb9;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+    overflow-y: auto; /* Add scrollbar if needed */
+}
+
+
+.profileBox {
+    font-size: 18px; /* Adjust font size as needed */
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    border: 3px solid #000; /* Set black border */
+    border-radius: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Add transition for smoother hover effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profileBox:hover {
+    transform: scale(1.1); /* Scale the profile box on hover for a popping effect */
+}
+.popup-prof{
+    position: fixed;
+    pointer-events:none;
+    top: 0;
+    left: 0;
+}
+#refresh {
+    background-color: #2f3640; /* Set background color */
+    position:relative;
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    font-size: 24px; /* Set font size */
+    cursor: pointer; /* Set cursor to pointer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px; /* Position above profile container */
+    right: -250px; /* Adjust position as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.closeButton {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.closeButton:before,
+.closeButton:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+}
+
+.closeButton:before {
+    transform: rotate(45deg);
+}
+
+.closeButton:after {
+    transform: rotate(-45deg);
+}
+
+.closeButton:hover:before,
+.closeButton:hover:after {
+    background-color: red; /* Change color on hover */
+}
+
+
+.profileInfoBox {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    max-width: 1000px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    pointer-events:none; /* Prevent the box from capturing mouse events */
+    left: calc(50% + 10px);
+    top: calc(50% - 50px);
+}
